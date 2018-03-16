@@ -145,7 +145,7 @@ class MyApp extends StatelessWidget {
     Widget packageImage(imageURL) {
       return new Container(
           decoration: new BoxDecoration(
-              color:Colors.black,
+              color: Colors.black,
               borderRadius: new BorderRadius.all(const Radius.circular(10.0))),
           child: new Image.asset(
             imageURL,
@@ -170,12 +170,11 @@ class MyApp extends StatelessWidget {
                           color: Colors.white30, fontSize: defaultTextSize),
                     )),
                 new Container(
-                    padding: _lineSpacing,
-                    child: 
-                    new Text(index.toString() + '. '+title,
-                          style: new TextStyle(
-                              color: Colors.white, fontSize: defaultTextSize)),
-                    ),
+                  padding: _lineSpacing,
+                  child: new Text(index.toString() + '. ' + title,
+                      style: new TextStyle(
+                          color: Colors.white, fontSize: defaultTextSize)),
+                ),
                 new Container(
                     padding: _lineSpacing,
                     child: new Text(
@@ -196,7 +195,7 @@ class MyApp extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   packageImage(imageURL),
-                  new Expanded(child:packageInfo(index, type, title)),
+                  new Expanded(child: packageInfo(index, type, title)),
                 ],
               )));
     }
@@ -204,17 +203,14 @@ class MyApp extends StatelessWidget {
     Widget packageSection(packageSummary) {
       return new Container(
           padding: const EdgeInsets.symmetric(horizontal: appLRMargin),
-          child: 
-           new Column(
+          child: new Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 new Text(packageSummary,
-                        style: new TextStyle(
-                            color: Colors.orange,
-                            fontSize: defaultTextSize + 2.0)),
+                    style: new TextStyle(
+                        color: Colors.orange, fontSize: defaultTextSize + 2.0)),
                 packageDetail(1, 'DRAFT MANUSCRIPT', 'THE WOLF PACT',
                     'assets/images/RidleyPearson.jpg'),
-
                 packageDetail(
                     2,
                     'CHARACTER NOTES',
