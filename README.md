@@ -1,7 +1,5 @@
 # Ampersonate
 
-## Table of Contents
-
 * [What is it](#what-is-it)
 * [What has been added](#what-has-been-added)
 * [What is "Slow Mode"](#what-is-slow-mode)
@@ -30,10 +28,10 @@ One of Flutter's selling points is its fast renders. To see it, just build a rel
 
 ## What needs to be added
 
-* Import of Bundle information from JSON
-  -- So we don't have to only look at Mr. Pearson's charming face
-  -- Currently details are hard-coded into the app since there is only one Author
-  -- Flutter has its own method of importing JSON separate from Dart proper
+* Import of Bundle information from JSON  
+  -- So we don't have to only look at Mr. Pearson's charming face!  
+  -- Currently details are hard-coded into the app since there is only one Author  
+  -- Flutter has its own method of importing JSON separate from Dart proper  
 * Add navigation to other pages in the app
 
 ## How I made this
@@ -41,6 +39,6 @@ One of Flutter's selling points is its fast renders. To see it, just build a rel
 Prior to making this app I had no experience with Flutter. This app was made in less than a day, including setting up the Flutter development environment on my computer. A rough breakdown of the hours spent:
 
 **Hour 0-1**: Setting up the Flutter dev environment and familiarizing myself with the Flutter docs  
-**Hour 1-2**: Building the stack for the profile photo and information 
-**Hours 2-5**: Implementing the scrolling view, the sticky header, 
+**Hour 1-2**: Building the stack for the profile photo and information   
+**Hours 2-5**: Implementing the scrolling view, the sticky header, and individual components  
 **Hours 5-6**: Creating documentation, building APKs, uplading to Appetize, etc.
