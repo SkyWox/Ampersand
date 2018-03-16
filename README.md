@@ -4,25 +4,34 @@
 
 * [What is it](#what-is-it)
 * [What has been added](#what-has-been-added)
+* [What is "Slow Mode"](#what-is-slow-mode)
 * [What needs to be added](#what-needs-to-be-added)
 * [How I made this](#how-i-made-this)
 
-## What is it
+## What is it?
 
 This is a recreation of Ampersand's iOS app channel screen in [Flutter](https://flutter.io).
+Flutter allows for quick platform-agnostic development. Android and iOS apps can be built from the same source code.
 
-**[Try it on Appetize](https://appetize.io/app/njv1hdhvutwb97ftcpp0dcymtw?device=nexus5&scale=75&orientation=portrait&osVersion=7.1)**
+**[Try it on Appetize](https://appetize.io/app/2afcujrh0215k2rqq787b1r2e4?device=iphone6s&scale=75&orientation=portrait&osVersion=11.1)**
 
 ![Resulting App](./Result.gif)
+
+## What is "Slow Mode"?
+
+Appetize can't run ARM code, so the app needs to be build in a debug profile. Debug has significant overhead (for hot reloading and checks) so the framerate is lower.
+One of Flutter's selling points is its fast renders. To see it, just build a release version by running `flutter build [ios/android]` at the project root.
 
 ## What features have been implemented
 
 * Stack to overlay the Profile with gradient over the Author's picture
-* Functional components allowing infinite sized Bundles
+* Functional components allowing infinite writing samples to be added
+* Component-based structure allowing new features to be swapped in easily.
 
 ## What needs to be added
 
 * Import of Bundle information from JSON
+  -- So we don't have to only look at Mr. Pearson's charming face
   -- Currently details are hard-coded into the app since there is only one Author
   -- Flutter has its own method of importing JSON separate from Dart proper
 * Add navigation to other pages in the app
@@ -32,6 +41,6 @@ This is a recreation of Ampersand's iOS app channel screen in [Flutter](https://
 Prior to making this app I had no experience with Flutter. This app was made in less than a day, including setting up the Flutter development environment on my computer. A rough breakdown of the hours spent:
 
 **Hour 0-1**: Setting up the Flutter dev environment and familiarizing myself with the Flutter docs  
-**Hour 1-2**:  
-**Hours 2-4**: Work  
-**Hours 4-6**: Creating documentation, building APKs, uplading to Appetize, etc.
+**Hour 1-2**: Building the stack for the profile photo and information 
+**Hours 2-5**: Implementing the scrolling view, the sticky header, 
+**Hours 5-6**: Creating documentation, building APKs, uplading to Appetize, etc.

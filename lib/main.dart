@@ -143,9 +143,9 @@ class MyApp extends StatelessWidget {
     }
 
     Widget packageImage(imageURL) {
-      return new DecoratedBox(
-          position: DecorationPosition.foreground, //doesn't work
+      return new Container(
           decoration: new BoxDecoration(
+              color:Colors.black,
               borderRadius: new BorderRadius.all(const Radius.circular(10.0))),
           child: new Image.asset(
             imageURL,
@@ -156,7 +156,7 @@ class MyApp extends StatelessWidget {
     }
 
     Widget packageInfo(index, type, title) {
-      const _lineSpacing = const EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 8.0);
+      const _lineSpacing = const EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 6.0);
       return new Container(
           padding: const EdgeInsets.only(left: 10.0),
           child: new Column(
@@ -171,14 +171,11 @@ class MyApp extends StatelessWidget {
                     )),
                 new Container(
                     padding: _lineSpacing,
-                    child: new Row(children: [
-                      new Text(index.toString() + '. ',
+                    child: 
+                    new Text(index.toString() + '. '+title,
                           style: new TextStyle(
                               color: Colors.white, fontSize: defaultTextSize)),
-                      new Text(title,
-                          style: new TextStyle(
-                              color: Colors.white, fontSize: defaultTextSize)),
-                    ])),
+                    ),
                 new Container(
                     padding: _lineSpacing,
                     child: new Text(
@@ -192,14 +189,14 @@ class MyApp extends StatelessWidget {
 
     Widget packageDetail(index, type, title, imageURL) {
       return new Container(
-          padding: const EdgeInsets.symmetric(vertical: 20.0),
+          padding: const EdgeInsets.symmetric(vertical: 10.0),
           child: new CupertinoButton(
               onPressed: () {},
               child: new Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  new Column(children: [packageImage(imageURL)]),
-                  new Column(children: [packageInfo(index, type, title)]),
+                  packageImage(imageURL),
+                  new Expanded(child:packageInfo(index, type, title)),
                 ],
               )));
     }
@@ -207,16 +204,17 @@ class MyApp extends StatelessWidget {
     Widget packageSection(packageSummary) {
       return new Container(
           padding: const EdgeInsets.symmetric(horizontal: appLRMargin),
-          child: new Column(
+          child: 
+           new Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                new Container(
-                    child: new Text(packageSummary,
+                new Text(packageSummary,
                         style: new TextStyle(
                             color: Colors.orange,
-                            fontSize: defaultTextSize + 2.0))),
+                            fontSize: defaultTextSize + 2.0)),
                 packageDetail(1, 'DRAFT MANUSCRIPT', 'THE WOLF PACT',
                     'assets/images/RidleyPearson.jpg'),
+
                 packageDetail(
                     2,
                     'CHARACTER NOTES',
@@ -279,7 +277,7 @@ class MyApp extends StatelessWidget {
                         'assets/images/RidleyPearson.jpg',
                         'Ridley',
                         'Pearson',
-                        'Discover Kingdom Keeps secrets and check out the first few chapters of two new series. It\'s writing you\'ve never seen before -- anywhere.')),
+                        'Discover Kingdom Keepers secrets and check out the first few chapters of two new series. It\'s writing you\'ve never seen before -- anywhere.')),
                 new SliverPersistentHeader(
                     pinned: true,
                     floating: true,
