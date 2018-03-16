@@ -5,14 +5,12 @@ dependencies:
   flutter:
     sdk: flutter
 
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^0.1.0
-  english_words: ^3.1.0
+  #serialization: "^0.10.4+4"
+  dartson: ^0.2.7
 
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
+transformers:
+- dartson
+
 
 
 # For information on the generic Dart part of this file, see the
@@ -21,7 +19,8 @@ dev_dependencies:
 # The following section is specific to Flutter.
 flutter:
   assets: 
-    - images/RidleyPearson.jpg
+    - assets/images/RidleyPearson.jpg
+    - assets/packageInfo.json
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
