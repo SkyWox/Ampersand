@@ -28,7 +28,7 @@ packages:
       name: barback
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.15.2+14"
+    version: "0.15.2+15"
   charcode:
     dependency: transitive
     description:
