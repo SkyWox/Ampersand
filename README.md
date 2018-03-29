@@ -32,7 +32,7 @@ One of Flutter's selling points is its fast renders. To see it, just build a rel
   -- Currently details are hard-coded into the app since there is only one author  
   -- Flutter has its own method of importing JSON that I didn't implement for this MVP
 * Add navigation to other pages in the app
-* Use custom fonts and match your exact shade of purple
+* Use custom fonts and match the app's exact shade of purple
 
 ## How I made this
 
